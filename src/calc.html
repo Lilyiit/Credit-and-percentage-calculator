@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hesaplayıcı</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-yellow-500 h-screen flex items-center justify-center">
+    <div class="box-content h-max w-max p-6 border-2 bg-white">
+        <div class="p-3 bg-neutral-200 my-3">
+            <h1 class="text-2xl font-bold mb-4"> Hesaplayıcı</h1>
+            <p> Hesaplayıcı ile hesaplamaranızı kolayca yapabilirsiniz</p>
+        </div>
+        <form class="max-w-sm mx-auto" onsubmit="return Kontrol(event)">
+            <label for="selectislem">Hesaplama türü:</label>
+            <select onchange="handleSelectChange(event)" name="islem" id="islemseç" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-96 p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="yuzde">x sayısının %y si nedir?</option>
+                <option value="toplam">x sayısının y fazlası nedir?</option>
+                <option value="fark">x sayısının y azı nedir?</option>
+                <option value="carp">x sayısının y katı nedir?</option>
+                <option value="bolme">x sayısının y'ye bölümü nedir?</option>
+                <option value="mod">x sayısının y üzerinden modu nedir?</option>
+                <option value="us">x sayısının üzeri y si nedir?</option>
+            </select>
+            <div class="text-center display flex my-8 gap-6">
+                <div>
+                    <label for="number" id="xd" class="block mb-2 text-sm text-gray-900 dark:text-black text-left">Değer x</label>
+                    <input type="number" id="number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="x" required>
+                </div>
+                <div>
+                    <label for="number" id="yd" class="block mb-2 text-sm text-gray-900 dark:text-black text-left">Değer y</label>
+                    <input type="number" id="percentage" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="y" required>
+                </div>
+            </div>
+            <div>
+                <input type="submit" value="Hesapla" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm w-96 my-4 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"/>
+            </div>
+        </form>
+        <a href="./Credit_calc.html">
+        <div id="result" class="text-center"></div>
+        <div class="absolute object-center left-1/2 transform -translate-x-1/2 -translate-y-6/5 bg-yellow-500 text-white w-16 h-16 rounded-full inline-flex items-center justify-center">
+        </div>
+        <div class="absolute object-center left-1/2 transform -translate-x-1/2 translate-y-1/4 bg-purple-800 text-white text-2xl w-11 h-11 rounded-full inline-flex items-center justify-center">
+            i
+        </div>
+        </a>
+    </div>
+    <script src="yellow.js"></script>
+</body>
+</html>
