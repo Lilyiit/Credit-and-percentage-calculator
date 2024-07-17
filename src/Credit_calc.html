@@ -15,26 +15,26 @@
         </div>
         <form class="max-w-sm mx-auto" onsubmit="return Kontrol(event)">
             <label for="selectislem">Bank Name:</label>
-            <select onchange="handleSelectChange(event)" name="bank" id="banksec" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-96 p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                <option value="ıng">ING (%3,69)</option>
+            <select onchange="handleSelectChange(event)" name="islem" id="islemseç" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-96 p-3.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <option value="ing">ING (%3,69)</option>
                 <option value="hsbc">HSCB (%7,50)</option>
-                <option value="ıcbc">ICBC (%4.25)</option>
+                <option value="icbc">ICBC (%4.25)</option>
                 <option value="aexp">American Express (%4.25)</option>
-                <option value="captial">Capital One (%4.48)</option>
+                <option value="capital">Capital One (%4.48)</option>
                 <option value="qnb">QNB (%4,49)</option>
             </select>
             <div class="text-center display flex my-8 gap-6">
                 <div>
                     <label for="number" id="xd" class="block mb-2 text-sm text-gray-900 dark:text-black text-left">Loan amounth:</label>
-                    <input type="number" id="number" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+                    <input type="number" id="loan" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
                 </div>
                 <div>
                     <label for="number" id="yd" class="block mb-2 text-sm text-gray-900 dark:text-black text-left">Installment:</label>
-                    <input type="number" id="percentage" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
+                    <input type="number" id="installment" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="" required>
                 </div>
             </div>
             <div>
-                <input type="submit" value="Calculate" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm w-96 my-4 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"/>
+                <input type="submit" onclick="calculate()" value="Calculate" class="text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium text-sm w-96 my-4 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700"/>
             </div>
         </form>
         <div id="result" class="text-center"></div>

@@ -100,3 +100,4 @@ function calculateus(number, percentage) {
     var result = (number ** ((percentage * number) / 100));
     return result;
 }
+    
