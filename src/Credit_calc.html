@@ -6,6 +6,33 @@
     <title>Calculator</title>
     <link rel="icon" type="image/x-icon" href="icon.png">
     <link href="./output.css" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 1em;
+            min-width: 400px;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+        }
+        table thead tr {
+            background-color: #F4CE14;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+        table th, table td {
+            padding: 12px 15px;
+            text-align: right;
+        }
+        table tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        table tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+    </style>
 </head>
 <body class="bg bg-purple-800 h-screen flex items-center justify-center">
     <div class="box-content h-max w-max p-6 border-2 bg-white">
@@ -38,13 +65,7 @@
             </div>
         </form>
         <div id="result" class="text-center"></div>
-        <a href="./calc.html">
-        <div class="absolute object-center left-1/2 transform -translate-x-1/2 -translate-y-6/5 bg-purple-800 text-white w-16 h-16 rounded-full inline-flex items-center justify-center">
-        </div>
-        <div class="absolute object-center left-1/2 transform -translate-x-1/2 translate-y-1/4 bg bg-yellow-500 text-white text-2xl w-11 h-11 rounded-full inline-flex items-center justify-center">
-            i
-        </div>
-        </a>
+        <div id="table-container" class="text-center"></div>
     </div>
     <script src="Credit_calc.js"></script>
 </body>
